@@ -228,7 +228,6 @@ hr {
     filter: brightness(1.5);
 }
 
-
 .fade-in {
     opacity: .1;
     transform: translateY(30px);
