@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PsykoRaccoon</title>
+  <link rel="icon" type="image/png" href="./imgs/Logo.png">
   <meta name="description" content="My portfolio">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -15,7 +16,6 @@
         <!-- NAVBAR -->
         <div class="menu container">
             <a href="index.html" class="logo">Psykoraccoon</a>
-            <label for="menu"><img src="./img/menu.png" class="menu-icono" alt=""></label>
             <nav class="navbar fade-in">
             <ul>
                 <li><a href="#About">About me</a></li>
@@ -37,34 +37,87 @@
     <!-- About me -->
     <section class="about container fade-in" id="About">
       <h2>About me</h2>
-      <div class="categories">
-        <!-- Aquí se insertarán dinámicamente los productos promocionales -->
-      </div>
+      <p>Hello there! My name is PsykoRaccoon (AKA Victor Sanchez) and I'm a game developer in development, I'm actually studying
+        the career of Game Development in a University called Amerike here in Mexico City, I'm 20 years old and I'm VERY passionate
+        about videogames, I've been a gamer since 4 and I always knew this was my goal.
+      </p>
     </section>
 
     <hr>
     <!-- My games -->
     <section class="games container fade-in" id="Games">
       <h2>My games</h2>
-      <div class="swiper mySwiper-2">
-        <div class="swiper-wrapper">
-          <!-- Aquí se insertarán dinámicamente los productos nuevos -->
-        </div>
+      <p id="intro">Throughout my career, I've done many games. I focus mainly on the logic of the code, I love solving bugs, 
+        implementing new mechanics, AI. Even though most of these games were made in a team, my work has mainly been that.</p>
+  
+      <div class="game">
+          <p>Wizarding Fight: This game is completely made by me, i made everything from scratch (except the srpites).
+            A simple local multiplayer in progress, where you and a friend have to fight each other, best of 10 wins. 
+          </p>
+          <img src="./imgs/WizardingFight1.png" alt="WizardingFight1">
       </div>
-    </section>
+  
+      <div class="game">
+          <p>Bodhi: My first game made for a Global Game Jam, me and 3 other friends worked here and I focused on the movement, menus, 
+            game flow and mechanics. </p>
+          <img src="./imgs/Bodhi1.png" alt="Bodhi1">
+      </div>
+  
+      <div class="game">
+          <p>Dino Riot: This game was made by me and other 3 friends as well, here I made the AI for the dinosaurs, the gun, the mechanics,
+            the logic behind the game, bugs and the game flow.</p>
+          <img src="./imgs/DinoRiot2.png" alt="DinoRiot">
+      </div>
+
+      <div class="game">
+        <p>Chibi Frenzy: This game was made by me and only one other friend, again, I focused on the logic, the rythm, the game flow and bugs.</p>
+        <img src="./imgs/ChibiFrenzy1.png" alt="Chibi">
+    </div>
+
+    <div class="game">
+      <p>Tower Frenzy: Made by me and my 3 best friends, this was our first VR game, this was a class project and we couldn't distribute it but
+        we finished. Again, I focused here on AI, game flow, logic, mechanics and the map</p>
+        <iframe width="300" height="169" src="https://www.youtube.com/watch?v=llGLDd5gZ6w" 
+        title="TowerFrenzy Trailer" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+  </div>
+  </section>
+  
     
     <hr>
 
+    <!-- Experience -->
     <section class="experience container fade-in" id="Experience">
         <h2>Experience</h2>
-        <p>Somos tres desarrolladores de videojuegos, cada uno con su propio estudio pero que trabajamos en conjunto en 11 studios. Somos tres apasionados por los videojuegos con la visión de crear proyectos que diviertan a la gente y sean de impacto, siguiendo así con el legado de los videojuegos que nos marcaron a nosotros. </p>
+        <p>The majority of my experience in game development comes from my school projects, but recently I worked in a Mexican company as an intern,
+          in that company, I only focused on solving bugs and implementing new mechanics to their games.</p>
     </section>
 
     <hr>
 
     <section class="contact container fade-in" id="Contact">
         <h2>Contact me</h2>
-        <p>Somos tres desarrolladores de videojuegos, cada uno con su propio estudio pero que trabajamos en conjunto en 11 studios. Somos tres apasionados por los videojuegos con la visión de crear proyectos que diviertan a la gente y sean de impacto, siguiendo así con el legado de los videojuegos que nos marcaron a nosotros. </p>
+        <div class="row">
+          <div class="col-md-6">
+              <form action="https://formspree.io/f/mgejqazj" method="POST">
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+          </div>
     </section>
 
     <hr>
@@ -73,16 +126,33 @@
   </main>
   <!-- FOOTER  -->
   <footer class="footer container fade-in" id="Socials"> 
-      <div class="link">
-          <h2>Socials</h2>
-          <ul>
-              <li><a href="https://www.instagram.com/psykoraccoon/profilecard/?igsh=MWswYjZqMnAzODVqYQ== ">Instagram </a></li>
-              <li><a href="https://github.com/PsykoRaccoon">Github</a></li>
-              <li><a href="https://psychoraccon04.itch.io/">Itch.io</a></li>
-              <li><a href="https://www.youtube.com/@psychoraccoon">Youtube</a></li>
-          </ul>
-      </div>
-  </footer>
+    <div class="link">
+        <h2>Socials</h2>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/psykoraccoon" target="_blank">
+                    <img src="./imgs/instagram.svg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/PsykoRaccoon" target="_blank">
+                    <img src="./imgs/Github.svg" alt="GitHub">
+                </a>
+            </li>
+            <li>
+                <a href="https://psychoraccon04.itch.io/" target="_blank">
+                    <img src="./imgs/itch-io.svg" alt="Itch.io">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@psychoraccoon" target="_blank">
+                    <img src="./imgs/youtube.svg" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 
   <!-- SCRIPTS -->
   <script src="./js/script.js"></script>
