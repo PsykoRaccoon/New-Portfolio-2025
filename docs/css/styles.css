@@ -1,21 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #caf0f8;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 @media screen and (max-width: 768px) {
     .menu {
-        justify-content: center;
+        justify-content: space-between;
     }
 
-    .menu .navbar {
-        display: none;
+    .menu-toggle {
+        display: flex;
     }
 
     .logo {
         font-size: 30px;
-        text-align: center;
-        margin: 0 auto;
-        display: block;
     }
 
+    .menu .navbar {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 220px;
+        background-color: #03045e;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        padding-top: 80px;
+    }
+
+    .menu .navbar.nav-open {
+        transform: translateX(0);
+    }
+
+    .menu .navbar ul li {
+        float: none;
+        text-align: center;
+    }
+
+    .game {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game p {
+        text-align: center;
+    }
 }
 
 * {
@@ -86,15 +149,6 @@ body{
     color: #00b4d8;
 }
 
-#menu {
-    display: none;
-}
-
-.menu label {
-    cursor: auto; 
-    display: none;
-}
-
 hr {
     border:  1px solid #003249;
 }
@@ -160,18 +214,6 @@ hr {
     text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-    .game {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .game p {
-        text-align: center;
-    }
-}
-
 .experience {
     padding: 50px;
     text-align: center;
@@ -180,17 +222,6 @@ hr {
 }
 
 .experience h2 {
-    font-size: 50px;
-    color: #caf0f8;
-    margin-bottom: 35px;
-}
-
-.contact {
-    padding: 50px;
-    text-align: center;
-}
-
-.contact h2 {
     font-size: 50px;
     color: #caf0f8;
     margin-bottom: 35px;
@@ -302,5 +333,3 @@ hr {
 .contact button:hover {
     background: #0077b6;
 }
-
-  

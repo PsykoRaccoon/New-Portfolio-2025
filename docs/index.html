@@ -16,18 +16,21 @@
         <!-- NAVBAR -->
         <div class="menu container">
             <a href="index.html" class="logo">Psykoraccoon</a>
-            <nav class="navbar fade-in">
+            <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="#About">About me</a></li>
                 <li><a href="#Games">My games</a></li>
-                <li><a href="#Experince">Experience</a></li>
+                <li><a href="#Experience">Experience</a></li>
                 <li><a href="#Contact">Contact me</a></li>
                 <li><a href="#Socials">Socials</a></li>
 
             </ul>
             </nav>
-            <div>
-            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
   </header>
   
@@ -37,8 +40,8 @@
     <!-- About me -->
     <section class="about container fade-in" id="About">
       <h2>About me</h2>
-      <p>Hello there! My name is PsykoRaccoon (AKA Victor Sanchez) and I'm a game developer in development, I'm actually studying
-        the career of Game Development in a University called Amerike here in Mexico City, I'm 20 years old and I'm VERY passionate
+      <p>Hello there! My name is PsykoRaccoon (AKA Victor Sanchez) and I'm a game developer, I'm a graduate at
+        the career of Game Development in a University called Amerike here in Mexico City, I'm 21 years old and I'm VERY passionate
         about videogames, I've been a gamer since 4 and I always knew this was my goal.
       </p>
     </section>
@@ -99,25 +102,18 @@
 
     <section class="contact container fade-in" id="Contact">
         <h2>Contact me</h2>
-        <div class="row">
-          <div class="col-md-6">
-              <form action="https://formspree.io/f/mgejqazj" method="POST">
-                  <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                  </div>
-                  <br>
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
-          </div>
+        <form action="https://formspree.io/f/mgejqazj" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <hr>
