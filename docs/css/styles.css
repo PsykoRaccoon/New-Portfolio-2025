@@ -222,7 +222,8 @@ body {
         text-align: center;
     }
 
-    .game {
+    .game,
+    .project {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -230,6 +231,15 @@ body {
 
     .game p {
         text-align: center;
+    }
+
+    .project-info {
+        text-align: center;
+    }
+
+    .tech-list,
+    .project-links {
+        justify-content: center;
     }
 }
 
@@ -240,6 +250,7 @@ hr {
 
 .about,
 .games,
+.projects,
 .experience {
     padding: 50px;
     text-align: center;
@@ -253,6 +264,7 @@ hr {
 
 .about h2,
 .games h2,
+.projects h2,
 .experience h2 {
     font-size: 50px;
     color: var(--color-text);
@@ -369,6 +381,115 @@ hr {
     color: var(--color-text);
     text-align: left;
     transition: color 0.4s ease;
+}
+
+.projects #projects-intro {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+.project img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.03);
+}
+
+.project-info {
+    max-width: 400px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    color: var(--color-logo);
+    margin-bottom: 10px;
+    transition: color 0.4s ease;
+}
+
+.project-info p {
+    font-size: 18px;
+    color: var(--color-text);
+    transition: color 0.4s ease;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.tech-list li {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.tech-list li:hover {
+    background: var(--color-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    color: #ffffff;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.15s ease;
+}
+
+.project-link:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+.project-link:active {
+    transform: scale(0.97);
+}
+
+.project-link--ghost {
+    background: transparent;
+    color: var(--color-text);
+}
+
+.project-link--ghost:hover {
+    background: var(--color-accent);
+    color: #ffffff;
 }
 
 .footer {

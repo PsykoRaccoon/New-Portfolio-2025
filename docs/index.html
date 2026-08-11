@@ -21,6 +21,7 @@
                 <li><a href="#About">About me</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Games">My games</a></li>
+                <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Experience">Experience</a></li>
                 <li><a href="#Contact">Contact me</a></li>
                 <li><a href="#Socials">Socials</a></li>
@@ -66,6 +67,31 @@
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Backend</h3>
+          <ul class="skills-list">
+            <li>ASP.NET Core</li>
+            <li>Razor Pages</li>
+            <li>REST APIs</li>
+            <li>ASP.NET Identity</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Databases</h3>
+          <ul class="skills-list">
+            <li>EF Core</li>
+            <li>SQL Server</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Tools &amp; deployment</h3>
+          <ul class="skills-list">
+            <li>Azure</li>
+            <li>Docker</li>
+            <li>Git</li>
           </ul>
         </div>
         <div class="skills-group">
@@ -124,8 +150,63 @@
     </iframe>
   </div>
   </section>
-  
-    
+
+    <hr>
+
+    <!-- Other projects -->
+    <section class="projects container fade-in" id="Projects">
+      <h2>Projects</h2>
+      <p id="projects-intro">Not everything I build is a game. These are the web and backend projects I've been
+        working on lately, where I get to focus on data, APIs and how the pieces talk to each other.</p>
+
+      <div class="project">
+        <div class="project-info">
+          <h3>Game Backlog API</h3>
+          <p>A REST API to keep track of a personal game backlog — what I want to play, what I'm playing and
+            what I already finished. I built the schema code-first with EF Core migrations, wired the database
+            context through dependency injection, and exposed full CRUD over REST, with a small board on top
+            to actually see the backlog.</p>
+          <ul class="tech-list">
+            <li>C#</li>
+            <li>ASP.NET Core</li>
+            <li>EF Core</li>
+            <li>PostgreSQL</li>
+            <li>Docker</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link project-link--ghost" href="https://github.com/PsykoRaccoon/Game-Backlog-Api" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <img src="./imgs/GameBacklogApi.png" alt="Game Backlog API board">
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h3>Task Organizer</h3>
+          <p>A task manager with user accounts, where each person only ever sees their own board.
+            The part I like most is that tasks re-sort themselves: you pick an urgency when you create
+            one, but as the deadline gets closer the task climbs on its own into Urgent and then Super
+            urgent — the urgency you chose only acts as a floor, it never drops. It's deployed and
+            running on Azure with ASP.NET Core Identity handling registration and login. (Please, if
+            you want to see it in action, give the page a moment to load as it is hosted on a free
+            tier of Azure and it has to fire up first — feel free to create an account!)</p>
+          <ul class="tech-list">
+            <li>C#</li>
+            <li>ASP.NET Core</li>
+            <li>Razor Pages</li>
+            <li>EF Core</li>
+            <li>SQL Server</li>
+            <li>Azure</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link" href="https://taskorganizer-victor.azurewebsites.net/" target="_blank" rel="noopener">Live demo</a>
+            <a class="project-link project-link--ghost" href="https://github.com/PsykoRaccoon/TaskOrganizer" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <img src="./imgs/TaskOrganizer.png" alt="Task Organizer board with tasks sorted by urgency">
+      </div>
+    </section>
+
     <hr>
 
     <!-- Experience -->
