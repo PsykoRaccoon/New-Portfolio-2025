@@ -2,271 +2,352 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PsykoRaccoon</title>
-  <link rel="icon" type="image/png" href="./imgs/Logo.png">
-  <meta name="description" content="Victor Sanchez (PsykoRaccoon) — software developer in Mexico City. C#, C++, HTML, CSS, JavaScript, and game development projects.">
+  <title>PsykoRaccoon | Victor Sanchez</title>
+  <meta name="description" content="Victor Sanchez, aka PsykoRaccoon. Game developer and C# / ASP.NET Core developer from Mexico City.">
+  <meta name="theme-color" content="#141414">
+  <meta property="og:title" content="PsykoRaccoon | Victor Sanchez">
+  <meta property="og:description" content="Games, web apps and APIs by Victor Sanchez, from Mexico City.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://psykoraccoon.github.io/New-Portfolio-2025/">
+  <meta property="og:image" content="https://psykoraccoon.github.io/New-Portfolio-2025/imgs/Logo.png">
+  <link rel="icon" type="image/png" href="./imgs/raccoon.png">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = saved ? saved === "light" : window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Silkscreen&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- HEADER -->
-  <header class="header">
-        <!-- NAVBAR -->
-        <div class="menu container">
-            <a href="index.html" class="logo">Psykoraccoon</a>
-            <nav class="navbar" id="navbar">
-            <ul>
-                <li><a href="#About">About me</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Games">My games</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Contact">Contact me</a></li>
-                <li><a href="#Socials">Socials</a></li>
+  <header class="header" id="top">
+    <div class="menu container">
+      <a href="#top" class="logo" aria-label="PsykoRaccoon, back to top">
+        <img src="./imgs/raccoon.png" alt="" width="34" height="40">
+        <span>PsykoRaccoon</span>
+      </a>
 
-            </ul>
-            </nav>
-            <div class="header-controls">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar a modo claro">🌙</button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-  </header>
-  
-  <main>
+      <nav class="navbar" id="navbar" aria-label="Main">
+        <ul>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Games">Games</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Experience">Experience</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <hr>
-    <!-- About me -->
-    <section class="about container fade-in" id="About">
-      <h1>Victor Sanchez</h1>
-      <h2>About me</h2>
-      <p>Hi, I'm Victor — you'll also find me online as PsykoRaccoon. I'm a software developer based in Mexico City,
-        currently finishing my degree in Game Development at Amerike University. My strongest languages are C#, HTML,
-        CSS and JavaScript, and I can comfortably read and write C++ as well. Games are what got me into programming
-        in the first place — I've been playing since I was 4, and building my own taught me how to actually think in
-        code instead of just copying it. Lately I've been branching out: building web projects, and brushing up on
-        C++ and picking up Python, so this portfolio isn't just about games anymore.
-      </p>
-    </section>
-
-    <hr>
-    <!-- Skills -->
-    <section class="skills container fade-in" id="Skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skills-group">
-          <h3>Core</h3>
-          <ul class="skills-list">
-            <li>C#</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Backend</h3>
-          <ul class="skills-list">
-            <li>ASP.NET Core</li>
-            <li>Razor Pages</li>
-            <li>REST APIs</li>
-            <li>ASP.NET Identity</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Databases</h3>
-          <ul class="skills-list">
-            <li>EF Core</li>
-            <li>SQL Server</li>
-            <li>PostgreSQL</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Tools &amp; deployment</h3>
-          <ul class="skills-list">
-            <li>Azure</li>
-            <li>Docker</li>
-            <li>Git</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Solid, brushing up</h3>
-          <ul class="skills-list">
-            <li>C++</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Currently learning</h3>
-          <ul class="skills-list">
-            <li>Python</li>
-          </ul>
-        </div>
+      <div class="header-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </section>
-
-    <hr>
-    <!-- My games -->
-    <section class="games container fade-in" id="Games">
-      <h2>My games</h2>
-      <p id="intro">Throughout my career, I've done many games. I focus mainly on the logic of the code, I love solving bugs, 
-        implementing new mechanics, AI. Even though most of these games were made in a team, my work has mainly been that.</p>
-  
-      <div class="game">
-          <p>Wizarding Fight: This game is completely made by me, i made everything from scratch (except the srpites).
-            A simple local multiplayer in progress, where you and a friend have to fight each other, best of 10 wins. 
-          </p>
-          <img src="./imgs/WizardingFight1.png" alt="WizardingFight1">
-      </div>
-  
-      <div class="game">
-          <p>Bodhi: My first game made for a Global Game Jam, me and 3 other friends worked here and I focused on the movement, menus, 
-            game flow and mechanics. </p>
-          <img src="./imgs/Bodhi1.png" alt="Bodhi1">
-      </div>
-  
-      <div class="game">
-          <p>Dino Riot: This game was made by me and other 3 friends as well, here I made the AI for the dinosaurs, the gun, the mechanics,
-            the logic behind the game, bugs and the game flow.</p>
-          <img src="./imgs/DinoRiot2.png" alt="DinoRiot">
-      </div>
-
-      <div class="game">
-        <p>Chibi Frenzy: This game was made by me and only one other friend, again, I focused on the logic, the rythm, the game flow and bugs.</p>
-        <img src="./imgs/ChibiFrenzy1.png" alt="Chibi">
     </div>
+  </header>
 
-    <div class="game">
-      <p>Tower Frenzy: Made by me and my 3 best friends, this was our first VR game, this was a class project and we couldn't distribute it but
-        we finished. Again, I focused here on AI, game flow, logic, mechanics and the map</p>
-        <iframe width="300" height="169" src="https://www.youtube.com/embed/llGLDd5gZ6w?si=4G5DJgz6vFrtCEwy" 
-        title="TowerFrenzy Trailer" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-  </div>
-  </section>
+  <main id="main">
 
-    <hr>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="hero-kicker fade-in">Victor Sanchez, aka PsykoRaccoon</p>
+        <h1 class="hero-title fade-in">Hi, I'm Victor.<br><span class="hl">I make games</span> and the stuff behind websites.</h1>
+        <p class="hero-sub fade-in">I'm a graduate of Game Development at Amerike University in Mexico City. Lately I've
+          also been building web apps and APIs with C# and ASP.NET Core.</p>
+        <div class="hero-actions fade-in">
+          <a class="btn" href="#Projects">See my projects</a>
+          <a class="btn btn--ghost" href="#Contact">Contact me</a>
+        </div>
+      </div>
 
-    <!-- Other projects -->
-    <section class="projects container fade-in" id="Projects">
-      <h2>Projects</h2>
-      <p id="projects-intro">Not everything I build is a game. These are the web and backend projects I've been
+      <div class="hero-raccoon fade-in">
+        <button class="raccoon" id="raccoon" type="button" aria-label="Poke the raccoon">
+          <img src="./imgs/raccoon.png" alt="PsykoRaccoon, a raccoon holding a game controller" width="662" height="790">
+          <span class="pupil pupil--left" aria-hidden="true"></span>
+          <span class="pupil pupil--right" aria-hidden="true"></span>
+        </button>
+        <p class="bubble" id="bubble" role="status" aria-live="polite"></p>
+        <p class="raccoon-hint">he's watching you. poke him.</p>
+      </div>
+    </section>
+
+    <div class="tail container" aria-hidden="true"></div>
+
+    <!-- About me -->
+    <section class="section container" id="About">
+      <div class="about-grid">
+        <div>
+          <h2 class="fade-in">About me</h2>
+          <div class="about-text fade-in">
+            <p>Hi, I'm Victor, you'll also find me online as PsykoRaccoon. I'm a software developer based in Mexico City,
+              currently graduated from my degree in Game Development at Amerike University. My strongest languages are C#, HTML,
+              CSS and JavaScript, and I can comfortably read and write C++ as well.</p>
+            <p>Games are what got me into programming in the first place. I've been playing since I was 4, and building my
+              own taught me how to actually think in code instead of just copying it. Lately I've been branching out:
+              building web projects, brushing up on C++ and picking up Python, so this portfolio isn't just about
+              games anymore.</p>
+          </div>
+        </div>
+
+        <ul class="facts fade-in">
+          <li><span class="pixel">Based in</span> Mexico City</li>
+          <li><span class="pixel">Graduated</span> Game Dev at Amerike</li>
+          <li><span class="pixel">Playing since</span> I was 4</li>
+          <li><span class="pixel">Learning</span> Python</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="tail container" aria-hidden="true"></div>
+
+    <!-- Projects -->
+    <section class="section container" id="Projects">
+      <h2 class="fade-in">Projects</h2>
+      <p class="section-intro fade-in">Not everything I build is a game. These are the web and backend projects I've been
         working on lately, where I get to focus on data, APIs and how the pieces talk to each other.</p>
 
-      <div class="project">
-        <div class="project-info">
-          <h3>Game Backlog API</h3>
-          <p>A REST API to keep track of a personal game backlog — what I want to play, what I'm playing and
-            what I already finished. I built the schema code-first with EF Core migrations, wired the database
-            context through dependency injection, and exposed full CRUD over REST, with a small board on top
-            to actually see the backlog.</p>
-          <ul class="tech-list">
-            <li>C#</li>
-            <li>ASP.NET Core</li>
-            <li>EF Core</li>
-            <li>PostgreSQL</li>
-            <li>Docker</li>
-          </ul>
-          <div class="project-links">
-            <a class="project-link project-link--ghost" href="https://github.com/PsykoRaccoon/Game-Backlog-Api" target="_blank" rel="noopener">View on GitHub</a>
+      <div class="projects-grid">
+        <article class="project card fade-in">
+          <div class="shot">
+            <img src="./imgs/TaskOrganizer.png" alt="Task Organizer board with tasks sorted by urgency" loading="lazy">
+            <span class="sticker">Live</span>
           </div>
-        </div>
-        <img src="./imgs/GameBacklogApi.png" alt="Game Backlog API board">
-      </div>
+          <div class="project-body">
+            <h3>Task Organizer</h3>
+            <p>A task manager with user accounts, where each person only ever sees their own board.
+              The part I like most is that tasks re-sort themselves: you pick an urgency when you create
+              one, but as the deadline gets closer the task climbs on its own into Urgent and then Super
+              urgent. The urgency you chose only acts as a floor, it never drops. It's deployed on Azure,
+              with ASP.NET Core Identity handling registration and login.</p>
+            <p class="note">Heads up: it's on Azure's free tier, so give it a moment to wake up. Feel free to create an account!</p>
+            <p class="stack">C# · ASP.NET Core · Razor Pages · EF Core · SQL Server · Azure</p>
+            <div class="project-links">
+              <a href="https://taskorganizer-victor.azurewebsites.net/" target="_blank" rel="noopener">Try it live</a>
+              <a href="https://github.com/PsykoRaccoon/TaskOrganizer" target="_blank" rel="noopener">Code on GitHub</a>
+            </div>
+          </div>
+        </article>
 
-      <div class="project">
-        <div class="project-info">
-          <h3>Task Organizer</h3>
-          <p>A task manager with user accounts, where each person only ever sees their own board.
-            The part I like most is that tasks re-sort themselves: you pick an urgency when you create
-            one, but as the deadline gets closer the task climbs on its own into Urgent and then Super
-            urgent — the urgency you chose only acts as a floor, it never drops. It's deployed and
-            running on Azure with ASP.NET Core Identity handling registration and login. (Please, if
-            you want to see it in action, give the page a moment to load as it is hosted on a free
-            tier of Azure and it has to fire up first — feel free to create an account!)</p>
-          <ul class="tech-list">
-            <li>C#</li>
-            <li>ASP.NET Core</li>
-            <li>Razor Pages</li>
-            <li>EF Core</li>
-            <li>SQL Server</li>
-            <li>Azure</li>
-          </ul>
-          <div class="project-links">
-            <a class="project-link" href="https://taskorganizer-victor.azurewebsites.net/" target="_blank" rel="noopener">Live demo</a>
-            <a class="project-link project-link--ghost" href="https://github.com/PsykoRaccoon/TaskOrganizer" target="_blank" rel="noopener">View on GitHub</a>
+        <article class="project card fade-in">
+          <div class="shot">
+            <img src="./imgs/GameBacklogApi.png" alt="Game Backlog API board" loading="lazy">
           </div>
-        </div>
-        <img src="./imgs/TaskOrganizer.png" alt="Task Organizer board with tasks sorted by urgency">
+          <div class="project-body">
+            <h3>Game Backlog API</h3>
+            <p>A REST API to keep track of my game backlog: what I want to play, what I'm playing and
+              what I already finished. I built the schema code-first with EF Core migrations, wired the database
+              context through dependency injection, and exposed full CRUD over REST, with a small board on top
+              to actually see the backlog.</p>
+            <p class="stack">C# · ASP.NET Core · EF Core · PostgreSQL · Docker</p>
+            <div class="project-links">
+              <a href="https://github.com/PsykoRaccoon/Game-Backlog-Api" target="_blank" rel="noopener">Code on GitHub</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <hr>
+    <div class="tail container" aria-hidden="true"></div>
+
+    <section class="section container" id="Games">
+      <h2 class="fade-in">My games</h2>
+      <p class="section-intro fade-in">I've made a bunch of games along the way. What I enjoy most is the logic: solving bugs,
+        implementing new mechanics and AI. Most of these were team projects, and that's the part I usually took.</p>
+
+      <div class="games-grid">
+        <article class="game card fade-in" tabindex="0">
+          <div class="media">
+            <img src="./imgs/WizardingFight1.png" alt="Wizarding Fight gameplay" loading="lazy">
+            <span class="level">1-1</span>
+            <span class="press-start" aria-hidden="true">Press start</span>
+          </div>
+          <div class="game-body">
+            <h3>Wizarding Fight</h3>
+            <p class="role">Solo · work in progress</p>
+            <p>Made completely by me from scratch (except the sprites). A local multiplayer game where you and a
+              friend fight each other. Best of 10 wins.</p>
+          </div>
+        </article>
+
+        <article class="game card fade-in" tabindex="0">
+          <div class="media">
+            <img src="./imgs/DinoRiot2.png" alt="Dino Riot gameplay" loading="lazy">
+            <span class="level">1-2</span>
+            <span class="press-start" aria-hidden="true">Press start</span>
+          </div>
+          <div class="game-body">
+            <h3>Dino Riot</h3>
+            <p class="role">Team of 4 · AI and gameplay</p>
+            <p>I made the AI for the dinosaurs, the gun, the mechanics, the logic behind the game and the game flow,
+              and fixed a lot of bugs.</p>
+          </div>
+        </article>
+
+        <article class="game card fade-in" tabindex="0">
+          <div class="media">
+            <img src="./imgs/Bodhi1.png" alt="Bodhi gameplay" loading="lazy">
+            <span class="level">1-3</span>
+            <span class="press-start" aria-hidden="true">Press start</span>
+          </div>
+          <div class="game-body">
+            <h3>Bodhi</h3>
+            <p class="role">Global Game Jam · team of 4</p>
+            <p>My first game jam. I worked on the movement, menus, game flow and mechanics.</p>
+          </div>
+        </article>
+
+        <article class="game card fade-in" tabindex="0">
+          <div class="media">
+            <img src="./imgs/ChibiFrenzy1.png" alt="Chibi Frenzy gameplay" loading="lazy">
+            <span class="level">1-4</span>
+            <span class="press-start" aria-hidden="true">Press start</span>
+          </div>
+          <div class="game-body">
+            <h3>Chibi Frenzy</h3>
+            <p class="role">Team of 2 · rhythm game</p>
+            <p>Made with one other friend. I focused on the logic, the rhythm, the game flow and bugs.</p>
+          </div>
+        </article>
+
+        <article class="game game--wide card fade-in">
+          <div class="media">
+            <iframe src="https://www.youtube.com/embed/llGLDd5gZ6w?si=4G5DJgz6vFrtCEwy"
+              title="Tower Frenzy trailer" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="game-body">
+            <span class="level level--inline">Boss level</span>
+            <h3>Tower Frenzy</h3>
+            <p class="role">VR · team of 4</p>
+            <p>Our first VR game, made with my 3 best friends as a class project. We couldn't distribute it, but we
+              finished it. I focused on AI, game flow, logic, mechanics and the map.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="tail container" aria-hidden="true"></div>
+
+    <!-- Skills -->
+    <section class="section container" id="Skills">
+      <h2 class="fade-in">Skills</h2>
+
+      <dl class="skills fade-in">
+        <div>
+          <dt>Core</dt>
+          <dd>C#, HTML5, CSS3, JavaScript</dd>
+        </div>
+        <div>
+          <dt>Backend</dt>
+          <dd>ASP.NET Core, Razor Pages, REST APIs, ASP.NET Identity</dd>
+        </div>
+        <div>
+          <dt>Databases</dt>
+          <dd>EF Core, SQL Server, PostgreSQL</dd>
+        </div>
+        <div>
+          <dt>Tools &amp; deployment</dt>
+          <dd>Azure, Docker, Git</dd>
+        </div>
+        <div>
+          <dt>Solid, brushing up</dt>
+          <dd>C++</dd>
+        </div>
+        <div>
+          <dt>Currently learning</dt>
+          <dd>Python <span class="loading" aria-hidden="true"></span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="tail container" aria-hidden="true"></div>
 
     <!-- Experience -->
-    <section class="experience container fade-in" id="Experience">
-        <h2>Experience</h2>
-        <p>The majority of my experience in game development comes from my school projects, but recently I worked in a Mexican company as an intern,
-          in that company, I only focused on solving bugs and implementing new mechanics to their games.</p>
+    <section class="section container" id="Experience">
+      <h2 class="fade-in">Experience</h2>
+
+      <ol class="timeline">
+        <li class="fade-in">
+          <p class="pixel">Internship</p>
+          <h3>Intern at a Mexican game company</h3>
+          <p>I focused on solving bugs and implementing new mechanics in their games.</p>
+        </li>
+        <li class="fade-in">
+          <p class="pixel">Amerike University</p>
+          <h3>School projects</h3>
+          <p>Most of my game development experience comes from here: team projects, game jams and a VR game,
+            usually taking care of the AI, the gameplay logic and the game flow.</p>
+        </li>
+      </ol>
     </section>
 
-    <hr>
+    <div class="tail container" aria-hidden="true"></div>
 
-    <section class="contact container fade-in" id="Contact">
-        <h2>Contact me</h2>
-        <form action="https://formspree.io/f/mgejqazj" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Contact -->
+    <section class="section container" id="Contact">
+      <div class="contact-grid">
+        <div class="fade-in">
+          <h2>Contact me</h2>
+          <p class="section-intro">Got a job, a project, or just want to talk about games? Leave me a message here
+            and I'll write back.</p>
+        </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+        <form class="card contact-form fade-in" action="https://formspree.io/f/mgejqazj" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <button type="submit">Enviar</button>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Send</button>
         </form>
+      </div>
     </section>
-
-    <hr>
-
 
   </main>
-  <!-- FOOTER  -->
-  <footer class="footer container fade-in" id="Socials"> 
-    <div class="link">
-        <h2>Socials</h2>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/psykoraccoon" target="_blank">
-                    <img src="./imgs/instagram.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/PsykoRaccoon" target="_blank">
-                    <img src="./imgs/Github.svg" alt="GitHub">
-                </a>
-            </li>
-            <li>
-                <a href="https://psychoraccon04.itch.io/" target="_blank">
-                    <img src="./imgs/itch-io.svg" alt="Itch.io">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/@psychoraccoon" target="_blank">
-                    <img src="./imgs/youtube.svg" alt="YouTube">
-                </a>
-            </li>
-        </ul>
-    </div>
-</footer>
 
+  <!-- FOOTER -->
+  <footer class="footer" id="Socials">
+    <div class="container footer-inner">
+      <p>Made by Victor (and a raccoon) in Mexico City, 2026.</p>
+      <ul class="footer-socials">
+        <li><a href="https://github.com/PsykoRaccoon" target="_blank" rel="noopener" aria-label="GitHub"><span class="icon icon--github"></span></a></li>
+        <li><a href="https://psychoraccon04.itch.io/" target="_blank" rel="noopener" aria-label="itch.io"><span class="icon icon--itch"></span></a></li>
+        <li><a href="https://www.youtube.com/@psychoraccoon" target="_blank" rel="noopener" aria-label="YouTube"><span class="icon icon--youtube"></span></a></li>
+        <li><a href="https://www.instagram.com/psykoraccoon" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon icon--instagram"></span></a></li>
+      </ul>
+      <p class="konami-hint" title="Try it on your keyboard">↑ ↑ ↓ ↓ ← → ← → B A</p>
+    </div>
+  </footer>
+
+  <!-- Easter egg bits -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <img class="roller" id="roller" src="./imgs/raccoon.png" alt="" aria-hidden="true">
 
   <!-- SCRIPTS -->
   <script src="./js/script.js"></script>
